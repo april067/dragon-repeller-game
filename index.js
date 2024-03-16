@@ -25,9 +25,9 @@ const weapons = [
 	{ name: 'sword', power: 100 },
 ];
 const monsters = [
-	{ name: 'slime', level: 2, health: 15 },
-	{ name: 'fanged beast', level: 8, health: 60 },
-	{ name: 'dragon', level: 20, health: 300 },
+	{ name: 'SLIME', level: 2, health: 15 },
+	{ name: 'FANGED BEAST', level: 8, health: 60 },
+	{ name: 'DRAGON', level: 20, health: 300 },
 ];
 const locations = [
 	{
@@ -142,8 +142,8 @@ function sellWeapon() {
 		gold += 15;
 		goldText.innerText = gold;
 
-		let currentWeapon = inventory.shift();
-		text.innerText = `You sold a ${currentWeapon}. In your inventory you have: ${inventory}`;
+		let sellWeapon = inventory.shift();
+		text.innerText = `You sold a ${sellWeapon}. In your inventory you have: ${inventory}`;
 	} else {
 		text.innerText = 'Do not sell your only weapon!';
 	}
@@ -200,7 +200,6 @@ function attack() {
 }
 function getMonsterAttackValue(level) {
 	const hit = level * 5 - Math.floor(Math.random() * xp);
-	console.log(hit);
 	return hit > 0 ? hit : 0;
 }
 function isMonsterHit() {
