@@ -23,6 +23,12 @@ body {
 
 	color: #0a0a23;
 }
+#controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
 #monsterStats {
 	display: none;
 	border: 1px solid #0a0a23;
